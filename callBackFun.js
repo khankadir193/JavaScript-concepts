@@ -1,3 +1,4 @@
+// callback function is a function which is called as parameter to another function.
 function weightDisplayer(item){
     console.log('itemDisplay...',item);
 };
