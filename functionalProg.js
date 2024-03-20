@@ -22,3 +22,10 @@ function add(x, y) {
 }
 
 console.log(add(2, 3)); // Output: 5
+
+//immutability..in functional programming immutable data is preferred means 
+// data can not be changed after created.
+const arr1 = [1,2,3];
+const arr2 = [...arr1,4];
+
+console.log('arr222...',arr2);
