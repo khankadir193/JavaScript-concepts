@@ -13,3 +13,12 @@ function add(x,y){
 };
 
 console.log('firstClassFunction...',applyOperation(add,54,14));
+
+//pure function:-pure functions are functions that have no side effects and  always.
+// return the same result the from same input.
+// Example of a pure function
+function add(x, y) {
+  return x + y;
+}
+
+console.log(add(2, 3)); // Output: 5
