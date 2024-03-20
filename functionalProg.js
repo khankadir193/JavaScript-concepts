@@ -29,3 +29,20 @@ const arr1 = [1,2,3];
 const arr2 = [...arr1,4];
 
 console.log('arr222...',arr2);
+
+//coffee generator
+
+function* coffeeGenerator(){
+    const coffeeTypes = ['latte', 'cappuccino', 'espresso', 'americano'];
+    for(let i=0;i<coffeeTypes.length;i++){
+        yield coffeeTypes[i];
+    }
+}
+
+const coffee = coffeeGenerator();
+console.log('coffee...?',coffee.next());
+console.log('coffee...?',coffee.next());
+console.log('coffee...?',coffee.next());
+console.log('coffee...?',coffee.next());
+console.log('coffee...?',coffee.next());
+
