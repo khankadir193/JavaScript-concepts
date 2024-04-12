@@ -60,3 +60,14 @@ var user = 'Abdul Kadir Khan';
 function myFunction(){
     console.log('Hello..World..!!!!');
 }
+
+//IIFE(Immediate invoke funciton expression):-this fun is a private fun we can
+//this fun is immediately invoked and executed as soon as it's defined.
+//IIFE function can not be accessed by the outside of the world.
+//creating private variable and as well as encapsulating all over the code 
+// into private scope without polluting golbal scope.
+(function (){
+    const a = 10,b = 40;
+    console.log(a+b);
+    console.log('immediately invoked function....');
+})();
