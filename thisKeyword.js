@@ -6,3 +6,15 @@ const person = {
 };
 
 person.greet('Khan');
+
+//call method
+
+function greet(profession){
+    console.log(`my name is ${this.name} && my profession is ${profession}`);
+};
+
+const obj = {
+    name:"Abdul Kadir Khan"
+};
+
+greet.call(obj,'Software Engineer');
