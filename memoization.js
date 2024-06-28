@@ -1,3 +1,7 @@
+//memoization is technique which is make function faster,and optimized.
+// it is cache previous calculated result.
+// if passing same argument then returning cache result.rather than calculating 
+// same result again is again.
 const memoizationAddition = ()=>{
     let cache = {};
 
