@@ -27,3 +27,6 @@ const { brName,brEducation } = myObj;
 console.log('brName..',brName);
 console.log('brEducation..',brEducation);
 
+//we can get the all over keys for the object.
+console.log('myObjKeys',Object.keys(myObj));
+console.log('objKeys..',Object.keys(obj.address));
