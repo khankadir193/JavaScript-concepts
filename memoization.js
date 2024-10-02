@@ -7,10 +7,10 @@ const memoizationAddition = ()=>{
 
     return (value)=>{
         if(value in cache){
-            console.log('cache results...??',cache);
+            // console.log('cache results...??',cache);
             return cache[value];
         }else{
-            console.log('calculating results...??');
+            // console.log('calculating results...??');
             let result = value + 10;
 
             cache[value] = result;
@@ -20,8 +20,16 @@ const memoizationAddition = ()=>{
 }
 
 const computedFunction = memoizationAddition();
+
+// Measure execution time for first calculation (without cache)
+console.time("First Call");
 console.log(computedFunction(10));
+console.timeEnd("First Call");  // Logs the time taken for the first execution
+
+// Measure execution time for second calculation (from cache)
+console.time("Second Call");
 console.log(computedFunction(10));
+console.timeEnd("Second Call");  // Logs the time taken for the second execution
 
 // or
 // console.log(memoizationAddition()(10));
