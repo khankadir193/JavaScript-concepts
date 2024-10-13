@@ -15,7 +15,7 @@ const obj = {
 Function.prototype.MyBind = function (obj){
     const fun = this;
     console.log('fun...??',fun);
-    return function (args){
+    return function (args){  
         fun.call(obj,args);
     }
 }
