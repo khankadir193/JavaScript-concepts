@@ -1,5 +1,5 @@
 const promise = new Promise(function (resolve,reject){
-    const success = true;
+    const success = false;
 
     if(success){
         resolve('Promises has been successfully resolved...!');
