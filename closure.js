@@ -27,3 +27,11 @@ latteLover();
 espressoLover();
 
 
+//another approach  for closure..
+const  greet = (name) =>{
+    return ()=>{
+        console.log(`Hi ${name}`);     
+    }
+};
+
+greet('Abdul Kadir Khan')(); //calling the function
