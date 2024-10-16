@@ -18,3 +18,8 @@ const obj = {
 };
 
 greet.call(obj,'Software Engineer');
+
+
+//this keyword is reference to the context. which  context is calling the function.
+// suppose if i declare a function inside an object then this keyword will be reference to the object.
+// if i declare a function outside an object then this keyword will be reference to the global object.
