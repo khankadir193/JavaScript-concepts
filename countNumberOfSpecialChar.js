@@ -11,6 +11,8 @@ function noOfSpecialChar(str) {
     }
 
     console.log('tempCount...',tempCount);
+    let set = new Set(strArr);
+    strArr = Array.from(set).join('');
 
     for(let i=tempCount;i<strArr.length;i++){
         if(strArr.charAt(i)===tempArr.charAt(i-tempCount).toLowerCase()){
