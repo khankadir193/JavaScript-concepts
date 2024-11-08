@@ -1,7 +1,7 @@
 function noOfSpecialChar(str) {
     let count = 0;
     let strArr = str.split('').sort().join('');
-    const tempArr = '';
+    let tempArr = '';
     let tempCount = 0;
     for(let i=0;i<strArr.length;i++){
         if(strArr.charCodeAt(i)>=65 && strArr.charCodeAt(i)<=90){
@@ -13,7 +13,7 @@ function noOfSpecialChar(str) {
     console.log('tempCount...',tempCount);
 
     for(let i=tempCount;i<strArr.length;i++){
-        if(strArr.charAt(i)===tempArr[i-tempCount].toLowerCase()){
+        if(strArr.charAt(i)===tempArr.charAt(i-tempCount).toLowerCase()){
             count++;
         }else{
             continue;
