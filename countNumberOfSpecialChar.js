@@ -10,7 +10,6 @@ function noOfSpecialChar(str) {
         }
     }
 
-    console.log('tempCount...',tempCount);
     let set = new Set(strArr);
     strArr = Array.from(set).join('');
 
@@ -23,7 +22,6 @@ function noOfSpecialChar(str) {
     }
 
     return count;
-    // console.log('tempArr....',tempArr);
 }
 
 const str = "aaAbcBC";
