@@ -27,3 +27,6 @@ function noOfSpecialChar(str) {
 const str = "aaAbcBC";
 
 console.log(noOfSpecialChar(str));
+
+// problem link
+//https://leetcode.com/problems/count-the-number-of-special-characters-i/
