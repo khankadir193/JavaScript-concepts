@@ -6,7 +6,13 @@ class Solution {
             return arr[0]+1;
         }
         arr.sort();
-        const arrs = fillArray(arr[0], arr.length);
+        // const arrs = fillArray(arr[0], arr.length);
+        const arrs = [];
+        for(let i = arr[0] !== 0 ? 1 : 0;i<arr.length+1;i++){
+            arrs.push(i);
+        }
+
+
         console.log('arrs.....',arrs);
         for(let i=0;i<arr.length;i++){
             if(arr[i]!==arrs[i]){
