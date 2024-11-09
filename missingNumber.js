@@ -3,7 +3,7 @@ class Solution {
     missingNumber(arr) {
         // code here
         if(arr.length === 1){
-            return arr[0]+1;
+            return arr[0] !== 1 ? 1 : arr[0]+1;
         }
         arr.sort((a,b)=>a-b);
         // console.log('After sorting arr.....',arr)
@@ -36,3 +36,4 @@ const missNumber = new Solution();
 // console.log(missNumber.missingNumber([1])); // Output: 2
 // console.log(missNumber.missingNumber([2,1])); // Output: 2
 // console.log(missNumber.missingNumber([13 ,5 ,4 ,10, 7 ,11, 1 ,9 ,12 ,8 ,2 ,6])); // Output: 10
+console.log(missNumber.missingNumber([3]));
