@@ -25,3 +25,6 @@ const obj = new Solution();
 // console.log(obj.subArraySum([7,2,1], 2));
 // console.log(obj.subArraySum([5,3,4], 2));
 console.log(obj.subArraySum([26,3,28,7], 52));
+
+//url link for this problem gfg
+// https://www.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1?page=1&category=Arrays&sortBy=submissions
