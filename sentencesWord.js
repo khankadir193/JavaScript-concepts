@@ -3,7 +3,6 @@ class Solution {
         if(txt.length === 1) return '1 1';
 
         console.log('word length...',txt.length);
-
     };
 }
 
