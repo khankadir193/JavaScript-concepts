@@ -1,10 +1,12 @@
 class Solution {
     wordSentencesCount = (txt) => {
+        let text = txt.split(' ');
+        console.log('text...',text);
         if(txt.length === 1) return '1 1';
 
         console.log('word length...',txt.length);
     };
-}
+};
 
 const obje = new Solution();
 const text = 'Sentences';
