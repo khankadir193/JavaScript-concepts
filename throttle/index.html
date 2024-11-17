@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle Scroll Example</title>
+    <style>
+        body {
+            margin: 0;
+            /* padding: 0; */
+            font-family: Arial, sans-serif;
+        }
+        .content{
+            height: 2000px;
+            /* overflow: scroll; */
+            background: linear-gradient(to bottom, #f7f7f7, #e5e5e5);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Throttle</h1> -->
+    <!-- <p>Throttle is a function that limits the rate at which a function can be called. It is used to improve the
+        performance of an application by limiting the number of times a function is called in a given time frame.</p>
+    <p>The throttle function takes two arguments: the function to be throttled and the time frame in milliseconds. The
+        function is called at most once per time frame, no matter how many times it is called.</p> -->
+
+    <div class="header">Scroll to see throlled updates</div>
+    <div class="content"></div>
+
+    <script>
+        // Throttle function
+        function throttle(func, delay) {
+            let lastCall = 0;
+
+            return function (...args) {
+                const now = Date.now();
+                if (now - lastCall >= delay) {
+                    lastCall = now;
+                    func(...args);
+                }
+            };
+        }
+
+        // Event handler for scroll
+        const handleScroll = () => {
+            console.log("Scroll event triggered:", new Date().toLocaleTimeString());
+        };
+
+        // Throttle the scroll event
+        const throttledScroll = throttle(handleScroll, 2000);
+
+        // Add event listener for scroll
+        window.addEventListener("scroll", throttledScroll);
+    </script>
+
+</body>
+
+</html>
