@@ -20,7 +20,9 @@ myPromise.then((result)=> console.log('result...Passed~~~',result))
 .catch((err)=> console.error('error....Failed!!!',err));
 
 
-//using async/await 
+//using async/await:- we can use async/await in place of .then and .catch
+// Promises can be used in with async/await syntax for cleaner and more
+// readable asynchronous code. 
 async function fetchData(params) {
     try{
         const result = await myPromise;
