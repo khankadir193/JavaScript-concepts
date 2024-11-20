@@ -1,3 +1,4 @@
+//explicitly 
 const myPromise = new Promise((resolve, reject)=>{
     try{
         if(resolve) {
