@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debounce Example</title>
+</head>
+<body>
+  <h1>Search Input with Debouncing</h1>
+  <input type="text" id="searchInput" placeholder="Start typing..." />
+
+  <div id="output"></div>
+
+  <script>
+    // Debounce function
+    function debounce(func, delay) {
+      let timer;
+      return function (...args) {
+        console.log('...args...',args);
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.call(this, args);
+        }, delay);
+      };
+    }
+
+    // Function to handle input changes
+    function handleInput(event) {
+      const searchTerm = event.target.value;
+      document.getElementById("output").innerText = `Searching for: ${searchTerm}`;
+      console.log(`Searching for: ${searchTerm}`); // Simulate API call
+    }
+
+    // Attach debounced handler to input field
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("input", debounce(handleInput, 1000)); // 500ms debounce
+  </script>
+</body>
+</html>
