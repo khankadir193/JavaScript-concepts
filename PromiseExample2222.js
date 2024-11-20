@@ -1,8 +1,9 @@
 //explicitly 
 const myPromise = new Promise((resolve, reject)=>{
+    resolve = false;
     try{
         if(resolve) {
-            resolve('Promise resolved successfully');
+            resolve('Promise resolved successfully...');
         }else if(reject) {
             reject('Promise rejected');
         }else{
@@ -17,3 +18,16 @@ const myPromise = new Promise((resolve, reject)=>{
 
 myPromise.then((result)=> console.log('result...Passed~~~',result))
 .catch((err)=> console.error('error....Failed!!!',err));
+
+
+//using async/await 
+async function fetchData(params) {
+    try{
+        const result = await myPromise;
+        console.log('fetchData result....',result);
+    }catch(err){
+        console.error('fetchData error....',err);
+    }
+};
+
+fetchData();
