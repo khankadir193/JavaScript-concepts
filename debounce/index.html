@@ -19,7 +19,7 @@
         console.log('...args...',args);
         clearTimeout(timer);
         timer = setTimeout(() => {
-          func.call(this, args);
+          func.call(this, ...args);
         }, delay);
       };
     }
