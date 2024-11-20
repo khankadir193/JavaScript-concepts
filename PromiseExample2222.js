@@ -66,5 +66,13 @@ Promise.all([promises1,promises2,promises3]).then((result)=>{
 const promises4 = Promise.reject('Promises has been rejected');
 Promise.allSettled([promises1,promises2,promises3,promises4]).then((result)=>{
     console.log('All promises settled...',result);
-})
+});
 
+//Promise.race:- resolves or rejects the as soon as any one promise settles.
+// first promise need to be completed.
+const slowPromise = new Promise((resolve)=> setTimeout(resolve,2000,'Slow'));
+const fastPromise = new Promise((resolve)=> setTimeout(resolve,1000,'Fast'));
+
+Promise.race([slowPromise,fastPromise]).then((result)=>
+    console.log(result) // Fast
+);
