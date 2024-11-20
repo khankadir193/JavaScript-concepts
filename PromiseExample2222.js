@@ -58,3 +58,13 @@ const promises3 = Promise.resolve('Promise 3 resolved');
 Promise.all([promises1,promises2,promises3]).then((result)=>{
     console.log('All promises resolved...',result);
 })
+
+//5.. combining promises:- Promise.allSettled() method can be used to combine
+// waits for all promises to completed. regardless of whether they are
+// resolved or rejected.
+
+const promises4 = Promise.reject('Promises has been rejected');
+Promise.allSettled([promises1,promises2,promises3,promises4]).then((result)=>{
+    console.log('All promises settled...',result);
+})
+
