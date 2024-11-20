@@ -47,3 +47,14 @@ myPromise.then((res)=>{
 }).catch((err)=>{
     console.error('error in chaining promises...',err);
 });
+
+//4.combining promises:- when multiple promises need to be resolve together
+// we can use Promise.all() method to combine promises.
+
+const promises1 = Promise.resolve('Promise 1 resolved');
+const promises2 = Promise.resolve('Promise 2 resolved');
+const promises3 = Promise.resolve('Promise 3 resolved');
+
+Promise.all([promises1,promises2,promises3]).then((result)=>{
+    console.log('All promises resolved...',result);
+})
