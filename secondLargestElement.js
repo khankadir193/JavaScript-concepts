@@ -7,7 +7,6 @@ class Solution {
         arr = Array.from(set);
 
         if(arr.length === 1) return -1;
-        // c
         
         return arr[1];
     }
