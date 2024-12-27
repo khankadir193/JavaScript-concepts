@@ -5,7 +5,7 @@ const charFreq = (str)=>{
     const freqChar = {};
 
     for(let i=0;i<strArr.length;i++){
-        freqChar[strArr[i]] = (strArr[i] || 0)
+        freqChar[strArr[i]] = (freqChar[strArr[i]] || 0) + 1;
     }
     
     console.log('freqChar....??',freqChar);
