@@ -29,3 +29,14 @@ obj['addProperty'] = 'newProperty'; // this will not work
 obj['name'] = 'Rehan khan'; // it will work accordingly...
 console.log('afterSealMethod...',obj);
 
+//create method:- it is used for creating new obj from prototype.
+const proto = {
+    display(){
+        console.log('this is the obj methods..');
+        return 'it has been created';
+    }
+}
+
+const obj3 = Object.create(proto);
+console.log('create newObject..',obj3.display());
+
