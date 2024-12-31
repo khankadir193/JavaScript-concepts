@@ -1,10 +1,19 @@
-function outerFunction(outerVariable){
-    function innerFunction(){
-        console.log(outerVariable);
-    };
+// function outerFunction(outerVariable){
+//     function innerFunction(){
+//         console.log(outerVariable);
+//     };
 
-    return innerFunction;
+//     return innerFunction;
+// };
+
+// const outer = outerFunction('first outer function');
+// outer()
+
+
+const arrowFun = (name)=>{
+    return (lastName) =>{
+        console.log('name...',name,'lastName',lastName);
+    };
 };
 
-const outer = outerFunction('first outer function');
-outer()
+const newFun = arrowFun('Abdul Kadir')('Khan')
