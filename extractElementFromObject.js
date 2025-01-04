@@ -16,19 +16,23 @@ const extractElement = {
 const tempArr = [];
 for(const [key,value] of Object.entries(extractElement)){
 
-    console.log('val..typeof', key,'value......',value);
+    // console.log('val..typeof', key,'value......',value);
     if(typeof value === 'object' && value.length > 0){
-        console.log('type of-------')
+        // console.log('type of-------')
         value.map((item)=>{
             const tempVal = item > 0 && item;
             tempVal && tempArr.push(tempVal);
-            console.log('tempVal....',tempVal);
+            // console.log('tempVal....',tempVal);
         })
     }else if(typeof value === 'object'){
-        console.log('empty...condition');
+        // console.log('value...-------',value)
+        for(const [key,val] of Object.entries(value)){
+            let valResult = val > 0 && val;
+            valResult && tempArr.push(valResult);
+            // console.log('objeEle',objEle);
+        }
     }else{
         const val = value>0 && Number(value)
-        console.log('val....elsepart',val);
         val && tempArr.push(val);
     }
     // console.log('ele....',key,'value...',value);
