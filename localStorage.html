@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+    <style>
+        body.light {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        body.dark {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Your Preferences</h1>
+    <label for="theme">Theme:</label>
+    <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+
+    <label for="fontSize">Font Size:</label>
+    <input type="number" id="fontSize" min="12" max="48" step="1">
+
+    <script>
+        const themeSelect = document.getElementById('theme');
+        const fontSizeInput = document.getElementById('fontSize');
+
+        // Load preferences from localStorage on page load
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedFontSize = localStorage.getItem('fontSize') || '16';
+
+        document.body.className = savedTheme;
+        themeSelect.value = savedTheme;
+        fontSizeInput.value = savedFontSize;
+        document.body.style.fontSize = `${savedFontSize}px`;
+
+        // Save preferences to localStorage
+        themeSelect.addEventListener('change', () => {
+            const selectedTheme = themeSelect.value;
+            localStorage.setItem('theme', selectedTheme);
+            document.body.className = selectedTheme;
+        });
+
+        fontSizeInput.addEventListener('input', () => {
+            const fontSize = fontSizeInput.value;
+            localStorage.setItem('fontSize', fontSize);
+            document.body.style.fontSize = `${fontSize}px`;
+        });
+    </script>
+</body>
+</html>

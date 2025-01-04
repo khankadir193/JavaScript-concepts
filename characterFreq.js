@@ -4,16 +4,11 @@ const charFreq = (str)=>{
 
     const freqChar = {};
 
-    for(let i=0;i<strArr.length;i++){
-        freqChar[strArr[i]] = (freqChar[strArr[i]] || 0) + 1;
+    for(let char of strArr){
+        freqChar[char] = (freqChar[char] || 0) + 1;
     }
     
-    console.log('freqChar....??',freqChar);
-    // for(let i=0;i<arr.length;i++){
-    //     for(let j=i+1;j<arr.length-1;j++){
-    //         console.log('j....',j);
-    //     };
-    // };
+    return freqChar;
 };
 
 const str = "abdulkadirkhan";

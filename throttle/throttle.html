@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #scroll{
+        height: 200vh;
+    }
+</style>
+<body>
+    <h1>Throttle technique</h1>
+    <div id="scroll"></div>
+</body>
+<script>
+
+    const throttle = (func,timer)=>{
+        let lastTimeCall = 0;
+        return (...args)=>{
+            let now = Date.now();
+            // console.log('now...',now);
+            // console.log('lastCallnow',lastTimeCall);
+            if(now-lastTimeCall >= timer){
+                lastTimeCall = now;
+                func(args);
+            }
+        }
+    }
+
+    const handleScroll = (val)=>{
+        console.log('scrollling....',val);
+    }
+
+    // const throttled = throttle(handleScroll,1000);
+
+    const scrollId = document.getElementById('scroll');
+    window.addEventListener('scroll',throttle(handleScroll,1000));
+</script>
+</html>

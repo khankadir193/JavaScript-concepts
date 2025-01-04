@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage Example</title>
+</head>
+<body>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('userForm');
+
+        // Load data from sessionStorage when the page loads
+        document.getElementById('name').value = sessionStorage.getItem('name') || '';
+        document.getElementById('email').value = sessionStorage.getItem('email') || '';
+
+        // Save data to sessionStorage as the user types
+        form.addEventListener('input', (event) => {
+            const { name, value } = event.target;
+            sessionStorage.setItem(name, value);
+        });
+
+        // Clear sessionStorage on form submit
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent actual form submission
+            console.log('Form submitted:', {
+                name: sessionStorage.getItem('name'),
+                email: sessionStorage.getItem('email'),
+            });
+            // sessionStorage.clear();
+            alert('Form data saved to sessionStorage and cleared!');
+        });
+    </script>
+</body>
+</html>
