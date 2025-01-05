@@ -10,12 +10,13 @@ class Solution {
         });
 
         const mathArr = Math.min(...eleArr);
-        console.log('findIndex...',arr.indexOf(mathArr))
+        if(eleArr.length === 0) return arr.length;
+        return arr.indexOf(mathArr);
     }
 };
 
 const solution = new Solution();
 // const arr = [2, 3, 7, 10, 11, 11, 25], target = 9;
-const arr = [2, 3, 7, 10, 11, 11, 25], target = 11;
-
-solution.lowerBound(arr,target);
+// const arr = [2, 3, 7, 10, 11, 11, 25], target = 11;
+const arr = [2, 3, 7, 10, 11, 11, 25], target = 100;
+console.log(solution.lowerBound(arr,target));
