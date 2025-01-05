@@ -13,6 +13,7 @@ class Solution {
 
         const mathArr = Math.min(...eleArr);
         console.log('mathArr....',mathArr);
+        console.log('findIndex...',arr.indexOf(mathArr))
     }
 };
 
