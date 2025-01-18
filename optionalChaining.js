@@ -17,4 +17,3 @@ console.log(user?.contact?.phone); // undefined (does not throw an error)
 
 //nullish operator :- this operator check only null/undefined operator.
 
-// const  
