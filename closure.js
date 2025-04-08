@@ -1,4 +1,4 @@
-// closure example into the 
+// closure example into the regualar function
 function createCaffeineAddict(coffeeType){
     const additction = `addicted to ${coffeeType}`;
     console.log('outer function..',additction);
