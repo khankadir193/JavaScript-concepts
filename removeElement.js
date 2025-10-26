@@ -10,6 +10,6 @@ var removeElement = function(nums, val) {
 };
 // const nums = [3,2,2,3]; 
 // const val = 3;
-const nums = [0,1,2,2,3,0,4,2], val = 2;
+const nums = [3,2,2,3], val = 3;
 
 console.log('removeElement...',removeElement(nums,val));
