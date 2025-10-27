@@ -6,12 +6,7 @@ function Pangram(str){
     strArr.sort();
     let strSort = strArr.join('').trim();
 
-    // for(let i=97; i<=122; i++){
-    //     if()
-    // }
-
     const set = new Set(strSort);
-
     const unDuplicateArr = Array.from(set);
 
     console.log('set.....',unDuplicateArr);
