@@ -25,3 +25,10 @@ function pickfromBothSide(arr,B){
 const arr = [5, -2, 3 , 1, 2];
 
 console.log('maxValueFromArrayElements..:-',pickfromBothSide(arr,3));
+
+//javascript string problems..
+
+// https://www.interviewbit.com/problems/javascript-strings/
+
+//many problems..
+// https://www.interviewbit.com/courses/fast-track-js/
