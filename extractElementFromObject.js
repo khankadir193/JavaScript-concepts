@@ -1,4 +1,4 @@
-//program is   i have to 
+//program is i have to extract the element or number from object properties and arrays. 
 const extractElement = {
     first:0,
     second:1,
