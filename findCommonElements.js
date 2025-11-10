@@ -1,3 +1,5 @@
+// problem link
+// https://www.geeksforgeeks.org/dsa/find-common-elements-three-sorted-arrays/
 function findCommonElementThreeArr(arr1,arr2,arr3){
     const tempArr = [];
 
