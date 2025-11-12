@@ -1,3 +1,4 @@
+// https://www.geeksforgeeks.org/dsa/maximum-consecutive-ones-or-zeros-in-a-binary-array/
 function maximumConsecutiveOne(arr) {
     let tempOne = 0, tempZero = 0;
     const tempArr = [];
