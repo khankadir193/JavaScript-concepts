@@ -7,7 +7,7 @@ const secretCodeShuffler = (s) => {
         const val = ascii + Number(s.charAt(i+1));
         tempArr.push(String.fromCharCode(val));
     }
-    return tempArr;
+    return tempArr.join('');
 };
 // const s = 'a2b3c1';
 // const s = 'x1y2z3';
