@@ -40,3 +40,7 @@ console.log('after add the elements...',arr2); // after add the elements
 let result3 = arr2.splice(2,1,0);
 console.log('result3',result3);
 console.log('afterReplaceElements',arr2);
+
+// One-line Interview Answer
+// slice() returns a new array without modifying the original, while splice() modifies 
+// the original array by adding, removing, or replacing elements.
