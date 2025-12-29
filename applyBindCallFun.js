@@ -1,5 +1,5 @@
 //call :- invoke the function immediately setting this explicitly and passing argument one by one.
-function greet(state,city){
+function greetFun(state,city){
     console.log(this.fullName+' '+this.address+' ',state,city);
 };
 
@@ -8,12 +8,12 @@ const obj = {
     address:'SiddharthNagar'
 };
 
-greet.call(obj,'Uttarpradesh','Gorakhpur');
+greetFun.call(obj,'Uttarpradesh','Gorakhpur');
 
 //apply :- same as call method but argument passed as an array
 console.log('apply method functionality...');
 
-function greet(...args){
+function greetApply(...args){
     console.log(this.name+' '+args);
 };
 
@@ -22,7 +22,7 @@ const user = {
 };
 
 const arr = [12,3,45,49];
-greet.apply(user,arr);
+greetApply.apply(user,arr);
 
 //bind :- does not execute immediately.
 // returns a new function with this parmanently bound.
