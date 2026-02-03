@@ -9,7 +9,7 @@ function displaySortArray(array2D) {
     const flatSortedArray = array2D.flat(1).sort((a, b) => a - b);
 
     console.log('----',flatSortedArray);
-}
+};
 
 
 

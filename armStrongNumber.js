@@ -14,6 +14,7 @@ class Solution {
     }
 }
 
-const n = 153;
+// const n = 153;
+const n = 123;
 const newObjRef = new Solution(n);
 console.log(newObjRef.armstrongNumber(n));

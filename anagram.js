@@ -15,5 +15,5 @@ class Solution {
 };
 
 const anagram = new Solution();
-// console.log(anagram.areAnagrams("listen", "silent")); // Output: true
-console.log(anagram.areAnagrams("hello", "world")); // Output: false
+console.log(anagram.areAnagrams("listen", "siletn")); // Output: true
+// console.log(anagram.areAnagrams("hello", "world")); // Output: false

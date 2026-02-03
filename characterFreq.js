@@ -1,10 +1,10 @@
 const charFreq = (str)=>{
-    const strArr = str.split('');
-    console.log('strArr....',strArr);
+    // const strArr = str.split(''); this split is the optional..
+    // console.log('strArr....',strArr);
 
     const freqChar = {};
 
-    for(let char of strArr){
+    for(let char of str){
         freqChar[char] = (freqChar[char] || 0) + 1;
     }
     

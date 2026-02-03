@@ -14,7 +14,7 @@ function firstNonRepeatingChar(str){
 
     return '$';
 };
-// const str = 'geeksforgeeks';
+const str = 'geeksforgeeks';
 // const str = 'racecar';
-const str = 'aabbccc';
+// const str = 'aabbccc';
 console.log('first non repeating char',firstNonRepeatingChar(str));
