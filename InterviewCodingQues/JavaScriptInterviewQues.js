@@ -69,3 +69,10 @@ counter.increment();
 counter.value = 5;
 console.log(counter.value, counter.increment());
 // What's the output and why?
+
+// third step
+async function test(){
+    return 10;
+};
+
+console.log(test())
