@@ -54,4 +54,34 @@ function removeDuplicates2(arr){
 
 console.log('secondApproach',removeDuplicates2(arr))
 
+//split the string with comma and semi colon
+const list = 'apple,samsung;vivo';
+const splitArr = list.split(/[,;]/);
+console.log('splitArr..',splitArr);
 
+
+//zomato interview question
+console.log('lion emoji')
+async function getLion(){
+    return '🦁'
+};
+
+const lion = getLion();
+console.log(lion === '🦁');
+
+//walmart question
+console.log('walmart analytical question');
+let users = {
+    frontendmaster:{},
+    kadir:{}
+};
+
+let name = 'kadir';
+// let name = 'constructor' || 'toString'; // this would be also true because it will check the prototype chain
+// for only obj i can use the Object.hasOwn(users[name]);
+
+if(users[name]){
+    console.log('BOSS');
+}else{
+    console.log('GUEST');
+}
