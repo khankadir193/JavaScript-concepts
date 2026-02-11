@@ -85,3 +85,38 @@ if(users[name]){
 }else{
     console.log('GUEST');
 }
+
+//print deep neested objected.
+console.log('Nested Object...');
+function printObj(obj){
+    // console.log(typeof obj === 'object');
+    for(let element in obj){
+        if(typeof obj[element] === 'object'){
+            // console.log('------')
+            printObj(obj[element]);
+        }else{
+            console.log(obj[element]);
+        }
+    }
+}
+
+const company = {
+    name:'Tech Corp',
+    deparment:{
+        name:'Engineering',
+        employee:{
+            empId:101,
+            empName:'Abdul Kadir Khan'
+        }
+    }
+};
+
+printObj(company);
+
+//comparing the boolean and objects
+console.log('comparing boolean and objects..');
+console.log(false == []); //if one value is boolean convert [] into '' string and this is falsy value.
+console.log(false == ![]); // here [] is truthy value directly convert into false.
+console.log([] != []); // arrays are objects it's compared by reference not value.
+console.log([1] == [1]); // arrays are objects compared by reference. === does NOT do type coercion Objects are still compared by reference
+console.log({} != {}); // Arrays and objects are compared by reference
