@@ -239,3 +239,34 @@ function convertInSmall(info){
 // let info = 'heLLo How aRe You.';
 let info = 'Abdul KADIR khaN'
 convertInSmall(info);
+
+
+//checking null/undefined values
+console.log('null/undefined values...')
+console.log(5=='5')
+console.log(5==='5')
+console.log(undefined==null) //it's true because inbuild rule loosely equal is true.
+console.log(undefined===null);
+console.log([] == false)
+// console.log([] === false)
+console.log(null == 0) // false because special inbuilt rule
+console.log('' == 0)
+console.log(false == '0')
+console.log(false === '0') 
+console.log([1] == 1) 
+// console.log([1] === 1);
+console.log(-0==0)
+
+console.log('writing test case for checking all results');
+const tests = [
+  { expression: "[] == 0", result: [] == 0 },
+  { expression: "[] == null", result: [] == null },
+  { expression: "[] == undefined", result: [] == undefined },
+  { expression: "[] == false", result: [] == false },
+  { expression: "[] == ![]", result: [] == ![] }
+];
+
+tests.forEach(test => {
+  console.log(`${test.expression} →`, test.result);
+});
+
