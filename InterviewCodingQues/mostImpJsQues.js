@@ -270,3 +270,22 @@ tests.forEach(test => {
   console.log(`${test.expression} →`, test.result);
 });
 
+function charOccur(str){
+    // const arr = str.split('').filter((item)=> item.trim()).join('');
+    const freq = {};
+    for(let ele of str.split('').filter((item)=> item.trim())){
+        // console.log('ele..',ele);
+        freq[ele] = (freq[ele] || 0) + 1;
+    };
+    
+    Object.keys(freq).forEach((item)=>{
+        console.log(item,freq[item])
+    })
+    
+    console.log('freq...',freq)
+};
+
+// const arr = [1,2,3,2,4,1,5,4,1];
+// const arr = ['a','x','b','a','z','x'];
+const str2 = 'abdul kadir khan';
+console.log(charOccur(str2));
