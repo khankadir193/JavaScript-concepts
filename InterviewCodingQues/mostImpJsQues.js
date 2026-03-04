@@ -252,7 +252,7 @@ console.log([] == false)
 console.log(null == 0) // false because special inbuilt rule
 console.log('' == 0)
 console.log(false == '0')
-console.log(false === '0') 
+console.log(false === '0')
 console.log([1] == 1) 
 // console.log([1] === 1);
 console.log(-0==0)
@@ -289,3 +289,34 @@ function charOccur(str){
 // const arr = ['a','x','b','a','z','x'];
 const str2 = 'abdul kadir khan';
 console.log(charOccur(str2));
+
+//check asscending order or not.
+function checkAsc(asc){
+    // for(let i=0;i<asc.length-1;i++){
+    //     if(asc[i] > asc[i+1])
+    //         return false;
+    // };
+
+    // return true;
+
+    // or
+    // inbuild method
+    const isSorted = asc.every((v,i)=> i===0 || v>=asc[i-1])
+    return isSorted;
+};
+
+let asc = [2,2,3,4];
+console.log('ascending order...',checkAsc(asc));
+
+//argument object 
+function doSomething(x,y){
+    arguments[1] = 20
+    return x+y;
+};
+
+console.log('do Something...',doSomething(1,1));
+
+//second array questions
+const modifiedArr = [1,2,3];
+modifiedArr[10] = 78;
+console.log('modified array..',modifiedArr[10]);
