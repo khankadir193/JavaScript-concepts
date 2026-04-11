@@ -4,3 +4,6 @@ important javascript questions
 https://www.fullstack.cafe/blog/advanced-javascript-interview-questions
 javascript coding problems
 https://www.fullstack.cafe/interview-questions/javascript
+
+need to solve problem today.
+https://leetcode.com/problems/plus-one/description/?envType=problem-list-v2&envId=oykooegt&
