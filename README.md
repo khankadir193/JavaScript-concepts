@@ -86,10 +86,38 @@ This repository is a comprehensive collection of **JavaScript fundamentals**, **
 **Full list**: Run `dir /s *.js` in terminal.
 
 ## 🚀 Usage
-1. Clone/open in VSCode.
-2. Run examples: `node Hoisting.js` or `node DSACodingProblem/Sorting.js`.
-3. HTML demos: Open `localStorage.html`, `debounce/index.html`, etc. in browser.
-4. No dependencies needed (pure JS).
+
+### Individual Files
+1. Run examples: `node Hoisting.js` or `node DSACodingProblem/Sorting.js`.
+2. HTML demos: Open `localStorage.html`, `debounce/index.html`, etc. in browser.
+
+### 🧪 Run & Test All Files at Once
+**`run-all.js`** runs **all .js files sequentially** (100+), prefixes outputs with filenames, handles errors.
+
+```bash
+node run-all.js
+```
+
+**Sample Output:**
+```
+📄 anagram.js
+==================================================
+true
+false
+
+📄 Hoisting.js
+==================================================
+undefined
+The variable Has been hoisted
+```
+
+- Logs all `console.log` with file context.
+- Skips `node_modules`/`.git`.
+- **For other developers**: Quick overview of all examples/results + code explanations in files/README.
+- Pure Node.js (no deps). Sequential to avoid output chaos.
+
+**Pro Tip**: Pipe to file `node run-all.js > all-outputs.txt` for review.
+
 
 ## 🤝 Contributing
 - Add new problems/concepts.
