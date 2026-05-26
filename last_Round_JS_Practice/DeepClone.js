@@ -23,4 +23,6 @@ console.log('clone copied obj',clone);
 
 // another method is the JSON.stringify. this is the old method.
 console.log('json',JSON.stringify(user));
+// Most Important Interview Point
+// Spread operator (...) does NOT do deep clone.
 
