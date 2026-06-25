@@ -5,7 +5,7 @@
 //
 
 let promise = new Promise(function (resolved,rejected){
-    let success = true;
+    let success = false;
     if(success){
         resolved('Task completed successfully...');
     }else{
@@ -34,7 +34,7 @@ async function promiseExample(){
 }
 promiseExample();
 
-//i have above code out order of execution.reject promise is different order.
+//i have above code doubt order of execution.reject promise is different order.
 // and resolve promise is different order.
 
 //👉 Microtask queue order depends on WHEN they are scheduled, not just that they are microtasks

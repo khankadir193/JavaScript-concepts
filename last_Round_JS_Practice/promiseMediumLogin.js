@@ -25,3 +25,12 @@ function login(userName,password){
 };
 
 login('Kadir','1234').then(console.log).catch(console.log);
+
+
+//fetch simulation wrote in very short
+
+function fetchData(){
+    return new Promise((resolve,reject)=>setTimeout(()=>resolve({name:'Abdul Kadir Khan',age:30}),2000));
+};
+
+fetchData().then((data)=>console.log(data)).catch((error)=>console.log(error));
