@@ -23,5 +23,6 @@ const displayPromise = async() => {
 displayPromise();
 
 
+
 //tech mahindra interview questions url
 // https://www.ambitionbox.com/interviews/tech-mahindra-interview-questions/front-end-developer?cvId
