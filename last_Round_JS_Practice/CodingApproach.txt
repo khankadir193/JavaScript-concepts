@@ -1,0 +1,16 @@
+/*
+Two pointer and hashtable approach:-
+
+| Problem                              | Best Technique |
+| ------------------------------------ | -------------- |
+| Two sorted arrays                    | Two Pointers   |
+| Pair sum in sorted array             | Two Pointers   |
+| Reverse array/string                 | Two Pointers   |
+| Remove duplicates from sorted array  | Two Pointers   |
+| Find intersection of unsorted arrays | Hash Table     |
+| Count frequency                      | Hash Table     |
+| First non-repeating character        | Hash Table     |
+| Detect duplicates                    | Hash Table     |
+| Two Sum (unsorted)                   | Hash Table     |
+
+*/
