@@ -1,0 +1,66 @@
+1.Implement once()
+The function should execute only once:
+Concept: closure.
+
+2.Implement memoization
+Concepts: closure, caching.
+
+3. Implement currying
+Concept: closures.
+
+4. Implement compose()
+Understand the execution order.
+
+5. Implement pipe()
+Similar to compose, but functions execute left-to-right.
+This is a nice functional JavaScript question.
+
+6. Retry a failed API call
+Very practical senior-level question.
+
+7. Sequential Promise execution
+execute them one after another, rather than simultaneously.
+
+8. Limit concurrent API calls
+Suppose you have 100 API requests but only want 5 running at a time.
+This is more advanced but excellent for senior frontend interviews.
+
+9. Implement call()
+10. Implement apply()
+11. Implement bind()
+
+These are more advanced and commonly used to test your understanding of this.
+
+🎯 For YOUR interview, I'd prioritize these
+
+Don't try to learn all 40 at once.
+
+I'd do them in this order:
+
+| Priority | Question                  |
+| -------- | ------------------------- |
+| 🔥🔥🔥   | Flatten array             |
+| 🔥🔥🔥   | Group by using `reduce()` |
+| 🔥🔥🔥   | Debounce                  |
+| 🔥🔥🔥   | Throttle                  |
+| 🔥🔥🔥   | Promise-based delay       |
+| 🔥🔥🔥   | Promise.all               |
+| 🔥🔥🔥   | Event loop/output         |
+| 🔥🔥     | Implement map             |
+| 🔥🔥     | Implement filter          |
+| 🔥🔥     | Implement reduce          |
+| 🔥🔥     | Deep clone                |
+| 🔥🔥     | Memoization               |
+| 🔥🔥     | Currying                  |
+| 🔥🔥     | `call/apply/bind`         |
+| 🔥       | Retry Promise             |
+| 🔥       | Concurrency limiting      |
+
+Best approach for you
+
+Since you've been solving these yourself, don't immediately look at solutions.
+
+For each problem, do:
+
+1. Understand the requirement → 2. Write test cases → 3. Attempt code → 4. Run it → 5. Send me your 
+code → 6. I'll review it like an interviewer.
