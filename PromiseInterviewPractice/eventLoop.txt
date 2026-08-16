@@ -23,3 +23,22 @@ Promise.resolve().then(() => console.log(3));
 setTimeout(() => console.log(4), 0);
 
 console.log(5);
+
+3.
+console.log("A");
+
+setTimeout(() => {
+    console.log("B");
+}, 0);
+
+async function test() {
+    console.log("C");
+
+    await Promise.resolve();
+
+    console.log("D");
+}
+
+test();
+
+console.log("E");
