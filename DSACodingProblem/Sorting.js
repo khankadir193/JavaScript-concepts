@@ -15,6 +15,23 @@ function BubbleSort(arr) {
 
 const numbers = [40, 100, 1, 5, 25, 10];
 console.log(BubbleSort(numbers)); // this is the use for tiny dataset.
+//my approach
+// function bubbleSort(arr){
+//     for(let i = 0;i<arr.length; i++){
+//         for(let j=0;j<arr.length;j++){
+//             if(arr[i] < arr[j]){
+//                 const temp = arr[i];
+//                 arr[i] = arr[j];
+//                 arr[j] = temp;
+//             }
+//         }
+//     }
+
+//     return arr;
+// };
+// // const arr = [5,2,8,1,3];
+// const arr = [8,6,9,10,4,1,6,7,8,0,5,3];
+// console.log(bubbleSort(arr));
 
 // Insertion Sort is like sorting a deck of cards in your hands. You pick one card at a time and 
 // "insert" it into its correct position among the cards you are already holding.
