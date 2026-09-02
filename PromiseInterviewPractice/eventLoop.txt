@@ -42,3 +42,74 @@ async function test() {
 test();
 
 console.log("E");
+
+4.
+Where should .catch() be placed?
+
+promise
+    .then(step1)
+    .then(step2)
+    .catch(handleError);
+
+
+promise
+    .catch(handleError)
+    .then(step2);
+
+They don't behave exactly the same.
+Interviewers may ask you to explain the difference.
+
+5.
+async function test() {
+    console.log("A");
+
+    await Promise.resolve();
+
+    console.log("B");
+}
+
+console.log("C");
+
+test();
+
+console.log("D");
+
+6.
+What is the difference between these?
+
+const a = await promise1;
+const b = await promise2;
+const c = await promise3;
+vs
+const [a, b, c] = await Promise.all([
+    promise1,
+    promise2,
+    promise3
+]);
+
+This is extremely important in real-world JavaScript.
+
+7.
+this question is very important i need understand later.
+const p1 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("P1");
+    }, 3000);
+});
+
+const p2 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("P2");
+    }, 1000);
+});
+
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("P3 Error");
+    }, 2000);
+});
+
+Promise.all([p1, p2, p3])
+    .then(console.log)
+    .catch(console.log);
+
