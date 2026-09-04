@@ -1,0 +1,112 @@
+Question:- what is currying?
+ANs:-Currying means converting a function that takes multiple arguments into a sequence of 
+functions that each take one (or fewer) arguments.
+
+The important thing is that each function remembers the previous arguments using closures.
+
+Why do we need currying?
+The main purpose is function reuse and creating specialized functions.
+
+Real world examples:-
+1: Logging
+2.React
+
+This is where currying can become interesting for you as a React developer.
+
+Suppose you have multiple input fields:
+
+<input
+  onChange={(e) => handleChange("username", e.target.value)}
+/>
+
+<input
+  onChange={(e) => handleChange("email", e.target.value)}
+/>
+
+<input
+  onChange={(e) => handleChange("password", e.target.value)}
+/>
+
+You could create a curried handler:
+const handleChange = field => value => {
+  setForm(prev => ({
+    ...prev,
+    [field]: value
+  }));
+};
+
+Then:
+<input onChange={e => handleChange("username")(e.target.value)} />
+
+<input onChange={e => handleChange("email")(e.target.value)} />
+
+<input onChange={e => handleChange("password")(e.target.value)} />
+
+
+Or, more efficiently, pre-create the handlers:
+
+const handleUsernameChange = handleChange("username");
+const handleEmailChange = handleChange("email");
+then
+<input onChange={e => handleUsernameChange(e.target.value)} />
+<input onChange={e => handleEmailChange(e.target.value)} />
+
+
+3: API configuration
+
+Suppose you have:
+function request(baseURL, token, endpoint) {
+  return fetch(`${baseURL}${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+}
+
+You could curry it:
+
+const request = baseURL => token => endpoint => {
+  return fetch(`${baseURL}${endpoint}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+};
+
+4: Filtering data
+
+const users = [
+  { name: "John", role: "admin" },
+  { name: "Mike", role: "user" },
+  { name: "Sarah", role: "admin" }
+];
+
+You could create:
+
+const filterBy = property => value => array =>
+  array.filter(item => item[property] === value);
+
+
+Now:-
+
+const filterByRole = filterBy("role");
+
+const getAdmins = filterByRole("admin");
+
+console.log(getAdmins(users));
+
+
+🔥 Follow-up interview questions
+
+After you implement this, an interviewer may ask:
+
+What is a closure and why is it required here?
+What happens if curry(sum)(1, 2, 3)(4)?
+Can you support curry(sum)(1)(2, 3, 4)?
+How would you preserve this?
+What's the difference between currying and partial application?
+Can you implement currying using reduce?
+What happens if the function has a default parameter or rest parameter?
+
+For a 4+ year JavaScript interview, I'd make sure you can implement the generic version from memory, 
+not just sum(a)(b)(c).
