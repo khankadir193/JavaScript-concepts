@@ -1,0 +1,27 @@
+1.interesting interview question
+
+const a = []; //sparse array.
+a[4] = 1;
+
+// console.log(a)
+
+const b = [undefined, undefined, undefined, undefined, 1];
+// console.log(b)
+a.forEach(() => console.log("hi"));
+// hi
+
+b.forEach(() => console.log("hi"));
+// hi
+// hi
+// hi
+// hi
+// hi
+A very good way to prove this
+console.log(a.hasOwnProperty(0));
+console.log(b.hasOwnProperty(0));
+console.log(1 in a);
+console.log(1 in b);
+
+Remember this rule 🧠
+Hole = element does not exist.
+undefined = element exists, but its value is undefined.
