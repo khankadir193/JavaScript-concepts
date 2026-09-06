@@ -1,0 +1,7 @@
+1.
+console.log([] == ![]);
+Boolean([])    // true
+![]            // false
+[] == false    // true
+[] never becomes false in your expression. ![] becomes false. Later, == converts the left-side [] 
+to "", and then to 0.

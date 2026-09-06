@@ -1,7 +1,7 @@
 const fetchData = async () => {
     return new Promise((resolve, reject) => {
         // Randomly fail to test the retry logic
-        const shouldFail = Math.random() > 0.3;
+        const shouldFail = Math.random() > 0.5;
         setTimeout(() => {
             if (shouldFail) {
                 reject('Value has been rejected');
