@@ -5,3 +5,60 @@ Boolean([])    // true
 [] == false    // true
 [] never becomes false in your expression. ![] becomes false. Later, == converts the left-side [] 
 to "", and then to 0.
+
+2.
+How would you make it print 0, 1, 2?
+Know solutions using:
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+Using let:-
+let creates a new binding for each iteration.
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+Using IIFE:-
+The IIFE captures the current value by passing it as an argument.
+
+for (var i = 0; i < 3; i++) {
+  (function (i) {
+    setTimeout(() => console.log(i), 1000);
+  })(i);
+}
+
+Using a Closure
+Create a function that remembers the value passed to it.
+function printNumber(i) {
+  return function () {
+    console.log(i);
+  };
+}
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(printNumber(i), 1000);
+}
+
+Key interview concept: var is function-scoped, so all callbacks share the same i. let is 
+block-scoped and gives each loop iteration its own binding. IIFEs/closures solve the problem by 
+capturing the current value in a new scope.
+
+
+Example 3 — this
+
+Be prepared for:
+
+const obj = {
+  name: "John",
+  getName() {
+    return this.name;
+  }
+};
+
+const fn = obj.getName;
+
+console.log(fn());
+
+
