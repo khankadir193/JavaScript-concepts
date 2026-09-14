@@ -1,0 +1,35 @@
+1.
+function abc() {
+   var a = { val: 1, val2: 2 };
+   var b = a,
+   delete b.val;
+   console.log(a);
+   console.log(b);
+}
+
+2.
+function abc() {
+   var a = { val: 1, val2: 2 };
+   var b = a,
+   delete b.val;
+   delete a.val2;
+   console.log(a);
+   console.log(b);
+}
+
+- Objects are reference types. Assignment of an object variable copies the reference, not the 
+object itself.
+
+3.
+var a = { val: 1, val2: 2 };
+var b = { ...a };
+
+delete b.val;
+
+console.log(a); 
+console.log(b);
+
+So remember this for interviews:-
+
+b = a → same object/reference.
+b = { ...a } → new object, shallow copy.
