@@ -32,8 +32,8 @@
 // console.log(double(7));
 
 
-const calculatePrice = discount => tax => price =>
-  price - price * discount + price * tax;
+const calculatePrice = discount => tax => price => price - price * discount + price * tax;
+
 
 const with10PercentDiscount = calculatePrice(0.10);
 
