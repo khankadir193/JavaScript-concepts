@@ -19,8 +19,8 @@ const findSubString = (str, subStr) => {
 
     return subCount;
 };
-// const str = "I like apple and apple juice."
-// const subStr = "apple";
-const str = "aapple";
+const str = "I like apple and apple juice."
 const subStr = "apple";
+// const str = "aapple";
+// const subStr = "apple";
 console.log(findSubString(str, subStr));
